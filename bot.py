@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 
@@ -11,4 +12,5 @@ async def on_ready():
 async def ping(ctx):
     await ctx.respond("🏓 Pong!")
 
-bot.run("")
+# استفاده از Secret
+bot.run(os.getenv("DISCORD_TOKEN"))
